@@ -1,0 +1,180 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   font-family: "Roboto", sans-serif;
+   color: rgb(184, 184, 184);
+   text-transform: capitalize;
+   word-spacing: 3px;
+   text-decoration: none;
+   font-size: 1.3 rem;
+}
+
+li {
+   list-style: none;
+}
+
+input {
+   border: none;
+   background: none;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+   color: white;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 300;
+   font-style: italic;
+}
+
+// .bg-art {
+//    // background: url(../assets/painting01-Frith_A_Private_View.jpg);
+//    background: url(../assets/painting01-Frith_A_Private_View.jpg);
+//    background-size: cover;
+//    width: 100%;
+//    z-index: -10;
+// }
+
+canvas {
+   margin: 0;
+   padding: 0;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   z-index: -10;
+}
+.container {
+   display: flex;
+   width: 100%;
+   // max-width: 1440px;
+   height: 100vh;
+   overflow: hidden;
+}
+
+.nav {
+   position: absolute;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   width: 40%;
+   min-width: 500px;
+   display: flex;
+   flex-flow: column;
+   overflow: hidden;
+   // align-items: space-evenly;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.824);
+   // background-image: linear-gradient(45deg, #f4353bec 0%, #e81a1ad7 99%, #ff1c1cc9 100%);
+   box-shadow: -5px 0px 50px rgb(0, 0, 0);
+}
+
+.svgContainer {
+   position: relative;
+   width: 100%;
+   height: 234px;
+}
+#logo {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 45px;
+   margin: 0 auto;
+   width: 300px;
+   fill: white;
+   // border: 1px solid blue;
+}
+
+#searchBar {
+   position: absolute;
+   top: 300px;
+   bottom: 0;
+   height: 60px;
+   width: 300px;
+   background: rgba(255, 255, 255, 0.064);
+   border-radius: 5px;
+   display: flex;
+   transition: all, 0.35s;
+   // border: 1px solid blue;
+   #searchIcon {
+      transform: scale(0.8);
+      transition: all, 0.35s;
+      margin-left: 15px;
+      height: auto;
+      // border: 1px solid blue;
+   }
+   #searchInput {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+   }
+}
+#searchIcon g {
+   stroke: rgb(183, 183, 183);
+   transition: stroke, 35s;
+}
+
+#searchBar:hover {
+   background-color: rgba(255, 255, 255, 0.098);
+   #searchIcon {
+      transform: scale(1);
+   }
+   #searchIcon g {
+         stroke: rgb(232, 232, 232);
+   }
+}
+
+#searchLine {
+   width: 0px;
+   height: 3px;
+   background: rgb(232, 232, 232);
+   position: absolute;
+   left: 50px;
+   bottom: 10px;
+   border-radius: 10px;
+   z-index: 10;
+}
+
+#search {
+   position: absolute;
+}
+
+input::placeholder {
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-style: italic;
+   font-size: 0.9rem;
+   color: white;
+}
+
+.linkContainer {
+   position: absolute;
+   top: 390px;
+   display: flex;
+   flex-flow: column;
+   overflow: hidden;
+   width: 100%;
+   li {
+      flex-grow: 1;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      // border: 1px solid green;
+      transition: all, 0.35s;
+      cursor: pointer;
+      a {
+         padding-left: 20px;
+         margin: 0 auto;
+         transition: all, 0.35s;
+         width: 300px;
+         // border: 1px solid blue;
+      }
+   }
+   li:hover {
+      background: rgba(232, 232, 232, 0.16);
+      a {
+         transform: translateX(20px);
+      }
+   }
+}

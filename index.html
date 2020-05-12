@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <!-- GSAP-->
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/PixiPlugin.min.js"></script>
+   <!-- Preload Script -->
+   <script src="js/imagesloaded.pkgd.min.js"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <main id="landing" class="container">
+      <div class="nav">
+         <div class="svgContainer">
+            <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="350" height="234" viewBox="0 0 427.2 286.2">
+               <path
+                  d="M426.8 142.9c0 27.7.5 55.3-.1 83-.8 30.2-22.7 54.4-52.6 59-24 3.7-45.8-1-63.5-18.7-12.1-12-17.3-27.1-17.3-43.9-.1-53-.2-106 0-159 .2-43.9 37.6-67 75.2-62.8 25.6 2.9 45.1 15.2 54.3 40 3 8.2 4.1 17.5 4.2 26.4.5 25.3.2 50.7.2 76h-.4zm-79.2.1v81c0 8.4 4.8 13.5 12.7 13.4 7.6 0 12.3-4.9 12.3-13.2V61.7c0-8.5-5-13.7-12.6-13.5-7.7.2-12.4 5.4-12.4 13.8v81zM226.1 107.2V62.7c0-10.9-7.1-16.4-17.8-13.9-5.6 1.4-8.6 4.6-9.5 10.2-.2 1.3-.2 2.7-.2 4v161c0 11.5 7.9 17.8 18.7 14.9 5.3-1.4 9.2-4.9 9.3-10.4.3-15.6.1-31.2.1-47.4h-13.6v-37.2h65.4v136.5h-30.7c-1.6-5.4-3.3-11.1-4.9-16.3-4.6 4.7-8.7 10-14 13.8-22.4 16.2-58.4 7.8-74.1-16.9-7.1-11.2-10.1-23.5-10.1-36.6-.1-54.2-.2-108.3 0-162.5.1-30.7 23.3-56.6 54.2-60.9 25-3.5 47 2.2 63.9 22.2 9.2 11 13.6 23.9 13.6 38.2.1 13.3 0 26.7 0 40v5.7c-16.8.1-33.2.1-50.3.1zM40.1 5.2h61.5c13.2 91.6 26.4 183.1 39.7 275.1H87.7c-1-12.1-2.1-24.4-3-36.6-.6-7.3-.4-7.3-7.6-7.3H52.9c-1.6 14.9-3.1 29.3-4.6 44H.1c13.3-91.7 26.6-183.3 40-275.2zm30.7 87.3c-.3 0-.6-.1-.9-.1-3.7 33.4-7.5 66.9-11.2 100.5h20.7c-2.9-33.7-5.8-67.1-8.6-100.4z" />
+            </svg>
+         </div>
+         
+         <div id="searchBar">
+            <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" width="27.9" height="30.4" viewBox="0 0 27.9 30.4">
+               <g fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10">
+                  <circle cx="12.2" cy="12.2" r="10.7" />
+                  <path stroke-linecap="round" d="M18.7 20.8l7.7 8.1" />
+               </g>
+            </svg>
+            <label for=""></label>
+            <input id="searchInput" type="search" placeholder="search website">
+            <div id="searchLine"></div>
+         </div>
+         <ul class="linkContainer">
+            <li><a class="link" href="#">Visitor Information</a></li>
+            <li><a class="link" href="#">Exhibitions / Events</a></li>
+            <li><a class="link" href="#">Artists / Collections</a></li>
+            <li><a class="link" href="#">Learning</a></li>
+            <li><a class="link" href="#">Shop and Dine</a></li>
+            <li><a class="link" href="#">Join & Support</a></li>
+         </ul>
+         <!-- <button id="donate">
+            <p>Donate</p>
+         </button> -->
+      </div>
+      <canvas id="myCanvas"></canvas>
+   </main>
+   <script src="js/main.js"></script>
+</body>
+
+</html>
