@@ -32,7 +32,7 @@
    }
 
    // Event listener which detect if the window has been resized.
-   // window.addEventListener('resize', resize);
+   window.addEventListener('resize', resize);
 
    // Updates the width and height variable when the window has been resized by the user
    function resize() {
@@ -92,12 +92,12 @@
       resizeImg()
 
       // Finally animate is called
-      // animate()
+      animate()
    }
 
    // When animate is called, the images are being animated via gsap and pixi.js gsap plugin
    function animate() {
-      var tl = new TimelineMax({})
+      var tl = new TimelineMax({repeat: -1})
       tl
          .from(img, 5, { pixi: { scale: 1.5, alpha: 0 } })
          .to(img, 3, { pixi: { alpha: 0 } }, "-=2.5")
