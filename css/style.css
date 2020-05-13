@@ -190,7 +190,7 @@ input {
   margin: 0;
   text-align: center;
   color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
   font-style: italic;
 }
@@ -346,9 +346,48 @@ input::placeholder {
   color: white;
 }
 
+.navIcons {
+  position: absolute;
+  top: 360px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.icon-con {
+  height: 80px;
+  width: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.icon-con .icon {
+  -webkit-transition: all, .25s;
+  transition: all, .25s;
+}
+
+.icon-con:hover .icon {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .linkContainer {
   position: absolute;
-  top: 390px;
+  top: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,7 +416,7 @@ input::placeholder {
 }
 
 .linkContainer li a {
-  padding-left: 20px;
+  padding-left: 30px;
   margin: 0 auto;
   -webkit-transition: all, 0.35s;
   transition: all, 0.35s;
@@ -391,5 +430,9 @@ input::placeholder {
 .linkContainer li:hover a {
   -webkit-transform: translateX(20px);
           transform: translateX(20px);
+}
+
+#infoIcon {
+  background: url(../../assets//);
 }
 /*# sourceMappingURL=style.css.map */

@@ -23,7 +23,7 @@ input {
    margin: 0;
    text-align: center;
    color: white;
-   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-family: Georgia, "Times New Roman", Times, serif;
    font-weight: 300;
    font-style: italic;
 }
@@ -62,7 +62,6 @@ canvas {
    display: flex;
    flex-flow: column;
    overflow: hidden;
-   // align-items: space-evenly;
    align-items: center;
    background: rgba(0, 0, 0, 0.824);
    // background-image: linear-gradient(45deg, #f4353bec 0%, #e81a1ad7 99%, #ff1c1cc9 100%);
@@ -82,9 +81,9 @@ canvas {
    margin: 0 auto;
    width: 300px;
    fill: white;
-   // border: 1px solid blue;
 }
 
+// Search bar
 #searchBar {
    position: absolute;
    top: 300px;
@@ -95,13 +94,11 @@ canvas {
    border-radius: 5px;
    display: flex;
    transition: all, 0.35s;
-   // border: 1px solid blue;
    #searchIcon {
       transform: scale(0.8);
       transition: all, 0.35s;
       margin-left: 15px;
       height: auto;
-      // border: 1px solid blue;
    }
    #searchInput {
       position: absolute;
@@ -122,7 +119,7 @@ canvas {
       transform: scale(1);
    }
    #searchIcon g {
-         stroke: rgb(232, 232, 232);
+      stroke: rgb(232, 232, 232);
    }
 }
 
@@ -148,9 +145,41 @@ input::placeholder {
    color: white;
 }
 
+// Nav Icon Links
+.navIcons {
+   position: absolute;
+   top: 360px;
+   width: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.icon-con {
+   height: 80px;
+   width: calc(100% / 3);
+   // border: 1px solid blue;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   .icon {
+      transition: all, .25s;
+   }
+}
+
+.icon-con:hover {
+   .icon {
+      transform: scale(1.2)
+
+   }
+   //  background: rgba(232, 232, 232, 0.16);
+}
+
+// Nav Links
 .linkContainer {
    position: absolute;
-   top: 390px;
+   top: 450px;
    display: flex;
    flex-flow: column;
    overflow: hidden;
@@ -160,15 +189,13 @@ input::placeholder {
       height: 50px;
       display: flex;
       align-items: center;
-      // border: 1px solid green;
       transition: all, 0.35s;
       cursor: pointer;
       a {
-         padding-left: 20px;
+         padding-left: 30px;
          margin: 0 auto;
          transition: all, 0.35s;
          width: 300px;
-         // border: 1px solid blue;
       }
    }
    li:hover {
