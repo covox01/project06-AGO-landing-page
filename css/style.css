@@ -195,6 +195,13 @@ input {
   font-style: italic;
 }
 
+.bg-art {
+  background: url(../assets/painting01-Frith_A_Private_View.jpg);
+  background-size: cover;
+  width: 100%;
+  z-index: -10;
+}
+
 canvas {
   margin: 0;
   padding: 0;
@@ -232,8 +239,6 @@ canvas {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(0, 0, 0, 0.824);
-  -webkit-box-shadow: -5px 0px 50px black;
-          box-shadow: -5px 0px 50px black;
 }
 
 .svgContainer {
@@ -358,6 +363,7 @@ input::placeholder {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  overflow: hidden;
 }
 
 .icon-con {

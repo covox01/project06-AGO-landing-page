@@ -1,3 +1,6 @@
+
+// =============== PIXI.JS + GSAP =============== >
+
 // Hero Image Cycling using PIXI.JS section
    // Global var for our canvas element
    const canvas = document.getElementById('myCanvas');
@@ -32,7 +35,7 @@
    }
 
    // Event listener which detect if the window has been resized.
-   window.addEventListener('resize', resize);
+   // window.addEventListener('resize', resize);
 
    // Updates the width and height variable when the window has been resized by the user
    function resize() {
@@ -92,12 +95,12 @@
       resizeImg()
 
       // Finally animate is called
-      animate()
+      // animate()
    }
 
    // When animate is called, the images are being animated via gsap and pixi.js gsap plugin
    function animate() {
-      var tl = new TimelineMax({repeat: -1})
+      var tl = new TimelineMax({})
       tl
          .from(img, 5, { pixi: { scale: 1.5, alpha: 0 } })
          .to(img, 3, { pixi: { alpha: 0 } }, "-=2.5")
@@ -106,9 +109,14 @@
          .to(img, 5, { pixi: { scale: 1.5, alpha: 1 }}, "-=2")
    }
 
+
+// =============== Vanilla JS + GSAP =============== >
+
    // Global Variables
    var searchBar = document.getElementById("searchBar");
-   var searchLine = document.getElementById("searchLine")
+   var searchLine = document.getElementById("searchLine");
+   var nav = document.querySelector(".nav");
+   var logo = document.querySelector(".svgContainer");
 
    function addListeners(){
       searchBar.addEventListener("mouseover", function(){
@@ -119,9 +127,30 @@
       })
    }
 
+   function animateIntro(){
+      var tl = new TimelineMax()
+      tl
+         .to(nav, {duration: .7, opacity: 1, xPercent: 0, ease: Power2.easeOut}, "sync")
+         .staggerTo("#info-svg, #calendar-svg, #collection-svg", 1, {opacity: 1, y: 0, ease: Back.easeInOut.config(3)}, .1, "-=.8")
+         .to(".linkContainer", {duration: .75, opacity: 1, x: 0, ease: Power2.easeOut}, "-=.9")
+         // .staggerTo(".link-con", 1, {opacity: 1, x: 0, ease: Power2.easeOut})
+   }  
+
+   function setIntroAnimation(){
+      gsap.set(nav, {xPercent: -100, force3D: false, rotation: 0.01})
+      gsap.set(".navIcons", { clip: "rect(0px, 0px, 0px 0px)" })
+      gsap.set(".icon-con", { y: 60, opacity: 0})
+      gsap.set(".linkContainer", { opacity: 0, x: -100 })   
+      // gsap.set(".link-con", { opacity: 0, x: -100})
+
+     
+      addListeners()
+      TweenMax.delayedCall(.7, animateIntro)
+   }
+
    function init(){
       gsap.set(searchLine, {force3D: false, rotation: 0.01})
-      addListeners()
+      setIntroAnimation()
    }  
 
    init()
